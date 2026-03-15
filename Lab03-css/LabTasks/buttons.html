@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 3 & 4-CSS Fundamentals: Button Styling</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+        background-color: plum; /* Background color added */
+    }
+
+    .heading {
+        margin: 20px 0;
+        text-align: center;
+        font-size: 22px;
+        color: white; /* White text for contrast */
+    }
+
+    h2 {
+        margin: 20px 0 10px 0;
+        color: white; /* Section headings in white */
+        text-align: center;
+    }
+
+    /* Button Styling Collection */
+    [class^="btn"]{
+        display: block;
+        width: 90%;
+        max-width: 250px;
+        margin: 20px auto;
+        padding: 18px;
+        font-size: 15px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background: rgb(191,191,253);
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    /* Different sizes, colors, and shapes */
+    .btn1 {
+        background: rgb(191,191,253);
+    }
+
+    /* Hover and Focus States */
+    .btn2:hover {
+        background: rgb(8,80,212);
+    }
+    .btn2:focus {
+        outline: 3px solid black;
+        outline-offset: 3px;
+    }
+
+    /* Transition Effects */
+    .btn3 {
+        box-shadow: 2px 4px 8px gray;
+    }
+    .btn3:hover {
+        transform: scale(1.05);
+    }
+
+    /* Shadow and Gradient Backgrounds */
+    .btn4 {
+        background: linear-gradient(to right, purple, pink);
+    }
+
+    /* Disabled State Styling */
+    .btn5:disabled {
+        background: lightgray;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    /* Responsive Buttons */
+    [class^="btn"] {
+        width: 90%;
+        font-size: 16px;
+        padding: 16px;
+    }
+</style>
+</head>
+<body>
+
+<h1 class="heading">This is Button Page of Lab Task</h1>
+<h1 class="heading">Task 5: Button Styling Collection</h1>
+
+<!-- Different sizes, colors, and shapes -->
+<h2>Sizes, Colors and Shapes</h2>
+<button class="btn1">Click Me</button>
+
+<!-- Hover and Focus States -->
+<h2>Hover and Focus Status</h2>
+<button class="btn2">Click Me</button>
+
+<!-- Transition Effects -->
+<h2>Transition Effects</h2>
+<button class="btn3">Click Me</button>
+
+<!-- Shadow and Gradient Backgrounds -->
+<h2>Shadow and Gradient Backgrounds</h2>
+<button class="btn4">Click Me</button>
+
+<!-- Disabled State Styling -->
+<h2>Disabled State Styling</h2>
+<button class="btn5" disabled>Click Me</button>
+
+</body>
+</html>

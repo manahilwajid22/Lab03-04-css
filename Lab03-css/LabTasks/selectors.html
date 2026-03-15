@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:plum;
+    padding:30px;
+}
+
+p{
+    color:#333;
+}
+
+
+.highlight{
+    background:burlywood;
+    padding:5px;
+}
+
+#title{
+    text-align:center;
+    color:#2c3e50;
+    margin-bottom:20px;
+}
+
+h2, h3{
+    color:#34495e;
+}
+
+section{
+    background:gray;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:6px;
+}
+
+input[type]{
+    border:1px solid lightblue;
+    padding:8px;
+}
+
+input[type="text"]{
+    background:#eef6ff;
+}
+
+a[href*="google"]{
+    color:red;
+    font-weight:bold;
+}
+
+
+
+.container p{
+    font-style:italic;
+}
+
+
+ul > li{
+    padding:5px;
+}
+
+h2 + p{
+    background:#ecf0f1;
+    padding:6px;
+}
+
+
+h2 ~ span{
+    color:orange;
+}
+
+
+a:hover{
+    color:green;
+}
+
+input:focus{
+    border-color:#3498db;
+    background:#f0f8ff;
+}
+
+li:first-child{
+    font-weight:bold;
+}
+
+li:last-child{
+    color:blue;
+}
+
+button:active{
+    background:red;
+    color:white;
+}
+
+
+p::first-letter{
+    font-size:20px;
+    color:darkred;
+    font-weight:bold;
+}
+
+p::after{
+    content:" ✔";
+    color:green;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 id="title">CSS Selectors</h1>
+
+<section class="container">
+
+<h2>Paragraph Example</h2>
+
+<p>This is a simple paragraph demonstrating element selector.</p>
+
+<p class="highlight">
+This paragraph is highlighted using a class selector.
+</p>
+
+<div>
+<p>This paragraph is inside a div to demonstrate descendant combinator.</p>
+</div>
+
+</section>
+
+
+<section>
+
+<h2>List Example</h2>
+
+<p>The first and last list items use pseudo-classes.</p>
+
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ul>
+
+</section>
+
+
+<section>
+
+<h2>Links</h2>
+
+<p>
+Visit <a href="https://www.google.com">Google</a> or
+<a href="https://example.com">Example</a>
+</p>
+
+<span>This span uses general sibling combinator.</span>
+
+</section>
+
+
+<section>
+
+<h2>Form</h2>
+
+<p>Attribute selectors and focus pseudo-class are used here.</p>
+
+<input type="text" placeholder="Enter your name"><br><br>
+<input type="email" placeholder="Enter your email"><br><br>
+
+<button>Submit</button>
+
+</section>
+
+</body>
+</html>

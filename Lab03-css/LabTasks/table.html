@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab03- Course Schedule</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: plum; /* Page background */
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Headings */
+    h1.heading {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 28px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    /* Table wrapper for responsiveness */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 30px;
+    }
+
+    table.table {
+      width: 90%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      min-width: 600px;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #7b1fa2; /* Darker plum */
+      color: white;
+      font-size: 16px;
+    }
+
+    /* Zebra striping */
+    tbody tr:nth-child(odd) {
+      background-color: #f9e6f9;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #fff0ff;
+    }
+
+    /* Hover effect */
+    tbody tr:hover {
+      background-color: #d8a3d8;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Color-coded courses */
+    .lab {
+      background-color: #81d4fa; /* light blue */
+    }
+
+    .theory {
+      background-color: #c5e1a5; /* light green */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      table.table {
+        min-width: unset;
+      }
+      th, td {
+        padding: 8px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="heading">Course Schedule</h1>
+  <h1 class="heading">Task 12: Course Web Styling</h1>
+
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9:00-10:30</td>
+          <td>Linear Algebra</td>
+          <td class="lab">Data Science (Lab + Theory)</td>
+          <td>-</td>
+          <td class="lab">Operating System (Lab)</td>
+          <td>Quran</td>
+        </tr>
+        <tr>
+          <td>10:30-12:30</td>
+          <td class="theory">Operating System (Theory)</td>
+          <td>-</td>
+          <td class="lab">Web Technology (Lab)</td>
+          <td>Applied Physics</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>12:30-1:00</td>
+          <td colspan="5">Lunch Break</td>
+        </tr>
+        <tr>
+          <td>1:00-2:30</td>
+          <td class="lab">Artificial Intelligence (Lab)</td>
+          <td class="theory">Web Technologies (Theory)</td>
+          <td>-</td>
+          <td class="theory">Artificial Intelligence (Theory)</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

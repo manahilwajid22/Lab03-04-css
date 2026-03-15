@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab03</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgb(196, 92, 196);
+      color: white;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 20px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 12px;
+      display: block;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff0ff;
+    }
+
+    /* Dropdown */
+    nav li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgb(196, 92, 196);
+      list-style: none;
+      display: none;
+      min-width: 150px;
+    }
+
+    nav li:hover > ul {
+      display: block;
+    }
+
+    nav li ul li {
+      margin: 0;
+    }
+
+    nav li ul a {
+      padding: 10px;
+      font-size: 13px;
+    }
+
+    /* Toggle Button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        left: -250px; 
+        width: 200px;
+        background: rgb(196, 92, 196);
+        height: calc(100vh - 60px);
+        transition: 0.3s;
+        overflow-y: auto;
+        padding-top: 10px;
+        z-index: 1000;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav li {
+        margin: 0;
+      }
+
+      nav li ul {
+        position: static;
+      }
+      #menu-toggle:checked + nav {
+        left: 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+    .heading {
+      margin: 20px;
+      text-align: center;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Navigation Bar</h1>
+    <!-- Toggle Button -->
+    <label for="menu-toggle" class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <input type="checkbox" id="menu-toggle" style="display:none;" />
+
+    <nav>
+      <ul>
+        <li>
+            <a href="#">Lab Exercise ▼</a>
+            <ul>
+              <li><a href="/Lab Exercises/index.html">Exercises</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Lab Tasks ▼</a>
+            <ul>
+                <li><a href="selectors.html">Selectors</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="image.html">Gallery</a></li>
+                <li><a href="buttons.html">Buttons</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="navigation-menu.html">Navigation</a></li>
+                <li><a href="transforms.html">Transforms</a></li>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="course.html">Course Table</a></li>
+            </ul>
+          </li>
+    </nav> 
+  </header>
+
+  <h1 class="heading">This is Navigation Page of Lab Task</h1>
+</body>
+</html>

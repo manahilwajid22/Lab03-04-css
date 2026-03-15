@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Styling Portfolio</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+        background-color: plum;
+    }
+
+    .heading {
+        margin: 20px 0;
+        text-align: center;
+        font-size: 22px;
+        color: white;
+    }
+
+    h2 {
+        margin: 20px 0 10px 0;
+        color: white;
+        text-align: center;
+    }
+
+    /* Image Styling Portfolio */
+    img {
+        width: 80%;         /* reduced size */
+        max-width: 300px;   /* smaller max width */
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* Rounded Corners and Circular Images */
+    .rounded {
+        border-radius: 30px;
+    }
+
+    .circle {
+        border-radius: 50%;
+    }
+
+    /* Image Borders and Shadows */
+    .border-img {
+        border: 3px solid black;
+    }
+
+    .shadow-img {
+        box-shadow: 10px 4px 20px black;
+    }
+
+    /* Hover Effects and Transitions */
+    .hover-img {
+        transition: 0.8s;
+    }
+
+    .hover-img:hover {
+        transform: scale(1.2);
+    }
+
+    /* CSS Filters */
+    .blur {
+        filter: blur(5px);
+    }
+
+    .grayscale {
+        filter: grayscale(150%);
+    }
+
+    .brightness {
+        filter: brightness(200%);
+    }
+
+    /* Image Overlay */
+    .overlay-container {
+        position: relative;
+        width: 80%;         /* reduced container size */
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .overlay-image {
+        width: 100%;
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 16px;
+        background: rgba(0,0,0,0.7);
+        padding: 8px;
+    }
+</style>
+</head>
+<body>
+
+<h1 class="heading">This is Image Page of Lab Task</h1>
+<h1 class="heading">Task 4: Image Styling Portfolio</h1>
+
+<!-- Rounded Corners and Circular Images -->
+<h2>Rounded Corners and Circular Images</h2>
+<img class="rounded" src="images/bg1.jpg" alt="Rounded Image">
+<img class="circle" src="images/bg1.jpg" alt="Circular Image">
+
+<!-- Image Borders and Shadows -->
+<h2>Image Borders and Shadows</h2>
+<img class="border-img" src="images/bg1.jpg" alt="Border Image">
+<img class="shadow-img" src="images/bg1.jpg" alt="Shadow Image">
+
+<!-- Hover Effects and Transitions -->
+<h2>Hover Effects and Transitions</h2>
+<img class="hover-img" src="images/bg1.jpg" alt="Hover Image">
+
+<!-- CSS Filters -->
+<h2>CSS Filters</h2>
+<img class="blur" src="images/bg1.jpg" alt="Blur Image">
+<img class="grayscale" src="images/bg1.jpg" alt="Grayscale Image">
+<img class="brightness" src="images/bg1.jpg" alt="Brightness Image">
+
+<!-- Image Overlays -->
+<h2>Image Overlays</h2>
+<div class="overlay-container">
+    <img src="images/bg1.jpg" class="overlay-image" alt="Overlay Image">
+    <p class="overlay-text">Beautiful Nature</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Effects - CSS Lab</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: plum; /* Set page background to plum */
+      color: #333;
+      padding: 20px;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 22px;
+      color: white;
+      margin: 15px 0;
+    }
+
+    /* Grid for effects */
+    .effects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Card Style */
+    .card {
+      background: rgb(255, 200, 200);
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: rgb(182, 118, 118);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: purple;
+      font-size: 20px;
+    }
+
+    /* Gradient Text */
+    .gradient { 
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      font-weight: bold;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 16px;
+    }
+
+    /* Custom Checkbox */
+    .checkbox input { display: none; }
+    .checkbox label {
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+    }
+    .checkbox label::before {
+      content: "";
+      position: absolute; left:0; top:0;
+      width:18px; height:18px; border:2px solid black;
+      border-radius:4px; background:white;
+    }
+
+    /* Custom Radio */
+    .radio input { display:none; }
+    .radio label { position: relative; padding-left:25px; cursor:pointer; }
+    .radio label::before {
+      content:""; position:absolute; left:0; top:0;
+      width:18px; height:18px; border:2px solid purple;
+      border-radius:50%; background:white;
+    }
+
+    /* Loader */
+    .loader {
+      width:30px; height:30px;
+      border:4px solid #ccc; 
+      border-radius:50%;
+      margin: 0 auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { 
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(180deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Text Clipping */
+    .text-clip {
+      font-weight:bold;
+      font-size:22px;
+      background-image:url('images/bg1.jpg');
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Complex Shadow */
+    .shadow {
+      color:#fff; 
+      background:purple;
+      padding:10px; 
+      border-radius:6px;
+      box-shadow: 3px 3px 0 #292421, 6px 6px 0 #aa4777;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .effects {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 15px;
+      }
+      .card {
+        padding: 10px;
+      }
+      .card h3 {
+        font-size: 18px;
+      }
+      .gradient {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="heading">Advanced Effects Page</h1>
+  <h1 class="heading">Task 10: Advanced Effects Showcase</h1>
+
+  <!-- Advanced Effects Showcase -->
+  <div class="effects">
+
+    <!-- Gradient Text -->
+    <div class="card">
+      <h3>Gradient Text Effects</h3>
+      <p class="gradient">This is para of gradient text effects.</p>
+    </div>
+
+    <!-- Custom Checkbox -->
+    <div class="card checkbox">
+      <h3>Custom Checkbox</h3>
+      <input type="checkbox" id="checkbox"><label for="checkbox">Option</label>
+    </div>
+
+    <!-- Custom Radio -->
+    <div class="card radio">
+      <h3>Custom Radio</h3>
+      <input type="radio" name="radio" id="radio"><label for="radio">Choice</label>
+    </div>
+
+    <!-- Loader -->
+    <div class="card">
+      <h3>Loading Animation</h3>
+      <p class="loader">This is para of loader animation.</p>
+    </div>
+
+    <!-- Text Clipping -->
+    <div class="card">
+      <h3>Text Clipping</h3>
+      <p class="text-clip">This is para of Text clipping.</p>
+    </div>
+
+    <!-- Complex Shadow Effects -->
+    <div class="card">
+      <h3>Complex Shadow</h3>
+      <p class="shadow">This is para of complex shadow effects.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

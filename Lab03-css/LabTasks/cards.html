@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 3 & 4-CSS Fundamentals: Card Component Design</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: plum;
+        padding: 40px 20px;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 26px;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        margin-bottom: 20px;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: all 0.4s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+    }
+
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-bottom: 3px solid plum;
+    }
+
+    .card-content {
+        padding: 15px 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-content h3 {
+        margin-bottom: 10px;
+        color: #4d0350;
+    }
+
+    .card-content p {
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 14px;
+        line-height: 1.5;
+        flex: 1;
+    }
+
+    .card-btn {
+        padding: 12px;
+        background: linear-gradient(120deg, #942b94, #4d0350);
+        border: none;
+        border-radius: 50px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .card-btn:hover {
+        background: linear-gradient(120deg, #4d0350, #942b94);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(183, 76, 204, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding: 20px 10px;
+        }
+
+        .card img {
+            height: 150px;
+        }
+
+        .card-content {
+            padding: 10px 15px;
+        }
+
+        .heading {
+            font-size: 22px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h1 class="heading">Task 7: Card Component Design</h1>
+
+<div class="cards-container">
+    <div class="card">
+        <img src="images/card1.jpg" alt="Bracelet">
+        <div class="card-content">
+            <h3>Rose Gold Bracelet</h3>
+            <p>Elegant Bracelet to complete your look.</p>
+            <button class="card-btn">Explore More</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/card2.jpg" alt="Earrings">
+        <div class="card-content">
+            <h3>Golden Earrings</h3>
+            <p>Stylish earring to brighten your outfit.</p>
+            <button class="card-btn">Explore More</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/card3.jpg" alt="Stretch-Bracelet">
+        <div class="card-content">
+            <h3>Stretchable Bracelet</h3>
+            <p>Simple, stylish and perfect for everyday wear.</p>
+            <button class="card-btn">Explore More</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/card4.jpg" alt="Brown Bag">
+        <div class="card-content">
+            <h3>Crossbody Bag</h3>
+            <p>Stylish Bag for everyday use.</p>
+            <button class="card-btn">Explore More</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/card5.jpg" alt="Black Bag">
+        <div class="card-content">
+            <h3>Hand Bag</h3>
+            <p>A perfect bag to match your outfit.</p>
+            <button class="card-btn">Explore More</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/card6.jpg" alt="Flower-Bracelet">
+        <div class="card-content">
+            <h3>Flower Bracelet</h3>
+            <p>A delicate bracelet that adds charm.</p>
+            <button class="card-btn">Explore More</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

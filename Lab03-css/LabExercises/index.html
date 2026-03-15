@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 3 & 4-CSS Fundamentals: Styling and Visual Design-Lab Exercises</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Part A:*/
+      /* Exercise 1:*/
+      /* Internal CSS */
+      .exercise-1 .internal {
+        color: purple;
+      }
+      /* CSS Precedence */
+      .exercise-1 .precedence {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lab Exercise</h1>
+
+    <!-- Part A: CSS Basics and Selectors -->
+
+    <h1>Part A: CSS Basics and Selectors</h1>
+
+    <!-- Exercise 1: -->
+<div class="exercise-1">
+    <h2>Exercise 1: CSS Implementation Methods</h2>
+    
+    <h2>INLINE CSS</h2>
+    <p style="color: blue">Inline CSS</p>
+  
+    <h2>INTERNAL CSS</h2>
+    <p class="internal">Internal CSS</p>
+    
+    <h2>EXTERNAL CSS</h2>
+    <p class="external">External CSS</p>
+    
+    <h2>CSS Precendence</h2>
+   
+    <p class="precedence" style="color: peru">My Name is MANAHIL WAJID</p>
+    
+  </div>
+    <!-- Exercise 2: Basic Selectors -->
+<div class="exercise-2">
+    <h2>Exercise 2: Basic Selectors</h2>
+    <!-- Element selectors (p, h1, div) -->
+    <h2>Element Selector</h2>
+    <h4>This is Element Selector in Heading</h4>
+    <p>This is Element Selector in Paragraph</p>
+    <div>This is Element Selector in div</div>
+    <!-- Class selectors (.class-name) -->
+    <h2>Class Selector</h2>
+    <p class="class-selector">Class Selector Example</p>
+    <!-- ID selectors (#element-id) -->
+    <h2>ID Selector</h2>
+    <h4 id="id-selector">ID Selector Example</h4>
+    <!-- universal selector (*) -->
+    <h2>Universal Selector</h2>
+    <p>Universal Selector example (applied to all elements)</p>
+  </div>
+    <!-- Exercise 3: Attribute Selectors -->
+    <div class="exercise-3">
+    <h2>Exercise 3: Attribute Selectors</h2>
+    <!-- Select elements with specific attributes ([attribute]) -->
+    <h2>Select elements with specific attributes ([attribute])</h2>
+    <input type="text" placeholder="Text field" />
+    <input type="password" placeholder="Password field" />
+    <input placeholder="No type attribute" />
+    <!-- Attribute value selectors ([attribute="value"]) -->
+    <h2>Attribute value selectors ([attribute="value"])</h2>
+    <input type="text" placeholder="Exact match: type=text" />
+    <input type="password" placeholder="Exact match: type=password" />
+    <!-- Partial value matching ([attribute*="value"]) -->
+    <h2>Partial value matching ([attribute*="value"])</h2>
+    <a href="https://www.google.com">Google Link</a>
+    <!-- Begins/Ends with selectors -->
+    <h2>Begins/Ends with selectors></h2>
+    <a href="https://instagram.com">Instagram Link(Start with https)</a>
+    <img src="images/practice.jpg" alt="practice image" />
+</div>
+    <!--  Part B:Combinators and Pseudo-classes  -->
+
+    <h1>Part B: Combinators and Pseudo-classes</h1>
+
+    <!-- Exercise 4: CSS Combinators -->
+    <div class="exercise-4">
+    <h2>Exercise 4: CSS Combinators</h2>
+    <!-- Descendant Combinator (space) -->
+    <h2>Descendant Combinator (space)</h2>
+    <div class="descendant">
+      <p>
+        This paragraph is a descendant of div.This is a example of descendant
+        combinator.
+      </p>
+      <div>
+        <p>
+          This nested paragraph is also a descendant.This is a example of
+          descendant combinator.
+        </p>
+      </div>
+    </div>
+
+    <!-- Child combinator (>) -->
+    <h2>Child Combinator (>)</h2>
+    <div class="parent-child">
+      <p>
+        Direct child paragraph (styled with >).This is a example of child
+        combinator.
+      </p>
+      <div>
+        <p>
+          Nested paragraph (not direct child).This is a example of child
+          combinator.
+        </p>
+      </div>
+    </div>
+
+    <!-- Adjacent sibling combinator (+) -->
+    <h2>Adjacent sibling combinator</h2>
+    <h4>Heading before paragraph</h4>
+    <p>Paragraph immediately after h4</p>
+    <p>Paragraph not immediately after h4</p>
+
+    <!-- General sibling combinator (~) -->
+    <h2>General sibling combinator</h2>
+    <h4>Heading for general siblings</h4>
+    <p>First general sibling</p>
+    <p>Second general sibling</p>
+    <p>Third general sibling</p>
+    </div>
+    <!-- Exercise 5: Pseudo Classes -->
+    <div class="exercise-5">
+      <h2>Exercise 5: Pseudo Classes</h2>
+      <!-- Link states -->
+      <h2>Link States</h2>
+      <a href="https://www.youtube.com" class="link-unvisited"
+        >Youtube Link - Unvisited Link (:link)</a
+      ><br />
+      <a href="https://www.google.com" class="link-visited"
+        >Google Link - Visited Link (:visited)</a
+      ><br />
+      <a href="https://www.instagram.com" class="link-hover"
+        >Instagram Link - Hover Link (:hover)</a
+      ><br />
+      <a href="https://www.facebook.com" class="link-active"
+        >Facebook Link - Active Link (:active)</a
+      ><br />
+
+      <!-- Form states -->
+      <h2>Form States</h2>
+      <input type="text" placeholder="(:focus)" />
+      <input type="checkbox" checked /> (:checked)<br />
+      <input type="text" disabled placeholder="(:disabled)" />
+
+      <!-- Structural pseudo-classes -->
+      <h2>Structural pseudo-classes</h2>
+      <ul>
+        <li>First child (:first-child)</li>
+        <li>Second child (:nth-child(2))</li>
+        <li>Third child (:last-child)</li>
+      </ul>
+
+      <!-- Content-based pseudo-classes -->
+      <h1>Content-based pseudo-classes</h1>
+      <div class="empty-div"></div>
+      <p class="para1">Paragraph 1</p>
+      <p class="para2">Paragraph 2</p>
+      <p class="para3">Paragraph 3</p>
+      <p class="para-not">This paragraph is not .para2</p>
+    </div>
+
+    <!-- Exercise 6: Pseudo-elements -->
+    <div class="exercise-6">
+      <h2>Exercise 6: Pseudo-elements</h2>
+
+      <!-- ::before and ::after -->
+      <h2>::before and ::after</h2>
+      <p class="before-after">This is a example of ::before and ::after.</p>
+
+      <!-- ::first-letter and ::first-line -->
+      <h2>::first-letter and ::first-line</h2>
+      <p class="first-letter-line">
+        This is a example of ::first-letter and ::first-line
+      </p>
+
+      <!-- ::selection -->
+      <h2>Selection</h2>
+      <p class="select-text">This is a example of selection</p>
+
+      <!-- Combine pseudo-elements with pseudo-classes -->
+      <h2>::first-letter and ::first-line</h2>
+      <p class="first-letter-hover">
+        This is a example of Combine pseudo-elements with pseudo-classes
+      </p>
+    </div>
+    <!-- Part C: Text and Font Styling -->
+
+    <h2>Part C: Text and Font Styling</h2>
+
+    <!-- Exercise 7: Font Properties -->
+    <div class="exercise-7">
+      <h2>Exercise 7: Font Properties</h2>
+      <!-- Set font families (web-safe fonts and Google Fonts) -->
+      <h2>Font Families</h2>
+      <p class="web-font">This paragraph uses web font (Arial, sans-serif).</p>
+      <p class="google-font">This paragraph uses Google Font: Roboto.</p>
+
+      <!-- Control font sizes using different units (px, em, rem, %) -->
+      <h2>Font Sizes</h2>
+      <p class="font-size">
+        This is a example of font sizes like that 16px, 1.5em, 2rem, 120%
+      </p>
+
+      <!-- Apply font weights -->
+      <h2>Font Weight</h2>
+      <p class="font-weight">
+        This is a example of font weight like that Normal,Bold,Lighter,500
+      </p>
+
+      <!-- Font style and variant properties -->
+      <h2>Font Style and Variant</h2>
+      <p class="font-style-variant">
+        This is a example of font weight like that italic style and small-caps
+        variant.
+      </p>
+    </div>
+    <!-- Exercise 8 -->
+    <div class="exercise-8">
+      <h2>Exercise 8: Text Styling</h2>
+      <!-- Control text color and opacity -->
+      <h2>Text Color and Opacity</h2>
+      <p class="color-opacity">Text with color and opacity</p>
+
+      <!-- Apply text alignment and decoration -->
+      <h2>Text Alignmnet and Decoration</h2>
+      <p class="alignment-decoration">
+        This is a example of alignment and decoration like that Center aligned,
+        underlined, uppercase
+      </p>
+
+      <!-- Use text transformation -->
+      <h2>Text Transformation</h2>
+      <p class="text-transform">
+        This is example of text transformation Capitalize and lowercase
+      </p>
+
+      <!-- Implement text shadow effects -->
+      <h2>Text Shadow Effects</h2>
+      <p class="text-shadow">This is a example of text shadow effects</p>
+    </div>
+
+    <!-- Exercise 9: Text Spacing-->
+    <div class="exercise-9">
+      <h2>Exercise 9: Text Spacing</h2>
+      <!-- Set line height -->
+      <h2>Line Height</h2>
+      <p class="line-height">This is a example of line height.</p>
+
+      <!-- Control letter and word spacing -->
+      <h2>Letter and Word Spacing</h2>
+      <p class="letter-word-spacing">
+        This is a example of Letter spacing like that 2px, Word spacing: 5px
+      </p>
+
+      <!-- Text indent and white-space properties -->
+      <h2>Text Indent and White Space</h2>
+      <p class="indent-white-space">
+        Indented paragraph with nowrap white-space.
+      </p>
+
+      <!-- Implement text overflow handling -->
+      <h2>Text Overflow Handling</h2>
+      <p class="text-overflow">
+        This is a long paragraph with the use of text-overflow clip in a fixed
+        width container.
+      </p>
+    </div>
+
+    <hr />
+
+    <!-- Part D: Background Styling -->
+
+    <h1>Part D: Background Styling</h1>
+
+    <!-- Exercise 10: Background Properties -->
+    <div class="exercise-10">
+      <h2>Exercise 10: Background Properties</h2>
+      <!-- Background Colors with Different Formats -->
+      <h2>Background Colors with Different Formats</h2>
+      <div class="bg-color-web">Web Color (brown)</div>
+      <div class="bg-color-hex">Hex Color (#8a5857)</div>
+      <div class="bg-color-rgb">RGB Color (rgb(50, 156, 50))</div>
+      <div class="bg-color-rgba">RGBA Color (rgba(182, 207, 123, 0.5))</div>
+
+      <!-- Background Images and Repetition -->
+      <h2>Background Images and Repetition</h2>
+      <div class="bg-image-repeat">Image repeated</div>
+      <div class="bg-image-no-repeat">Image no-repeat</div>
+      <!-- Background Position and Size -->
+      <h2>Background Position and Size</h2>
+      <div class="bg-position-size">Position center, size cover</div>
+      <!-- Background Attachment -->
+      <h2>Background Attachment</h2>
+      <div class="bg-attachment-fixed">
+        Fixed background while scrolling
+        <p style="height: 1000px"></p>
+      </div>
+      <div class="bg-attachment-scroll">
+        Scroll background with content
+        <p style="height: 1000px"></p>
+      </div>
+    </div>
+    <!-- Exercise 11: Advanced Background Techniques -->
+
+    <div class="exercise-11">
+      <h1>Exercise 11: Advanced Background Techniques</h1>
+
+      
+      <h2>Bakground Layers</h2>
+      <p class="bg-multiple">Multiple background layers</p>
+
+ 
+      <h2>Linear and Radial Gradient</h2>
+      <p class="bg-linear-gradient">Linear gradient background</p>
+      <p class="bg-radial-gradient">Radial gradient background</p>
+
+ 
+      <h2>Background Blend Modes</h2>
+      <p class="bg-blend">
+        This is a example of Background blend mode multiply
+      </p>
+
+      
+      <h2>Background Clip and Origin</h2>
+      <p class="bg-clip-origin">
+        This is a example of Background clip and origin example
+      </p>
+    </div>
+
+    <!-- Part E: -->
+
+    <h1>Part E: Image Styling and Effects</h1>
+    <!--Exercise 12:-->
+    <div class="exercise-12">
+    <h2>Exercise 12: Basic Image Styling</h2>
+    
+    <h2>Image Dimensions and Aspect Ratio</h2>
+    <img src="images/image2.jpg" alt="Basic" class="img-basic" />
+    
+    <h2>Borders and Border radius</h2>
+    <img src="images/image2.jpg" alt="Border" class="img-border" />
+  
+    <h2>Object-fit and Object-position</h2>
+    <img src="images/image2.jpg" alt="Object Fit" class="img-fit" />
+    
+    <h2>Basic image filters</h2>
+    <img src="images/image2.jpg" alt="Filter" class="img-filter" />
+    </div>
+    <!-- Exercise 13: Advanced Image Effects -->
+    <div class="exercise-13">>
+    <h2>Exercise 13: Advanced Image Effects</h2>
+    
+    <h2>Hover Effect on Image</h2>
+    <img src="images/image2.jpg" class="hover-img" alt="Hover Image" />
+
+    <h2>CSS Filters (Blur, Brightness, Contrast)</h2>
+    <img src="images/image2.jpg" class="filter-img" alt="Filter Image" />
+
+   
+    <h2>Blend Mode Effect</h2>
+    <div class="blend-container">
+      <img src="images/image2.jpg" class="blend-img" alt="Blend Image" />
+    </div>
+
+    
+    <h2>Image Mask and Clipping Path</h2>
+    <img src="images/image2.jpg" class="clip-img" alt="Clip Image" />
+    </div>
+    <!-- Part F -->
+    <h1>Part F: Box Model and Visual Effects</h1>
+    <!-- Exercise 14: Box Model Properties -->
+    <div class="exercise-14">
+    <h2>Exercise 14: Box Model Properties</h2>
+    
+    <h2>Margins, Padding, and Borders</h2>
+    <div class="box">
+      This is a example of Box-Model like that Margin,Padding,Border
+    </div>
+  
+    <h2>Box-Sizing</h2>
+    <div class="box-border">This is a example Box-sizing</div>
+    
+    <h2>Outline Properties</h2>
+    <div class="box-outline">This is a example of Outline</div>
+  
+    <h2>Box-shadow Effects</h2>
+    <div class="box-shadow">This is a example of Box-shadow</div>
+    </div>
+    <!-- Exercise 15: Transforms and Transitions -->
+  <div class="exercise-15">
+    <h2>Exercise 15: Transforms and Transitions</h2>
+   
+    <h2>2D Transformations</h2>
+    <div class="transform-box">Transform Box</div>
+
+   
+    <h2>CSS Transition</h2>
+    <div class="transition-box">Transition Box</div>
+
+    <h2>Transform Origin</h2>
+    <div class="origin-box">Origin Box</div>
+
+    <h2>Hover Transition Effect</h2>
+    <div class="hover-box">Hover Effect</div>
+  </div>
+  </body>
+</html> 

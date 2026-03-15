@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio - Manahil Wajid</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body */
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: plum; /* Page background */
+        color: #333;
+        padding: 20px;
+      }
+
+      /* Headings */
+      .heading {
+        text-align: center;
+        font-size: 28px;
+        color: white;
+        margin: 20px 0 10px 0;
+        font-weight: bold;
+      }
+
+      /* Subheading */
+      .subheading {
+        text-align: center;
+        font-size: 18px;
+        color: #f2f2f2;
+        margin-bottom: 30px;
+      }
+
+      /* Profile Section */
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); /* Slight transparent card effect */
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        flex-wrap: wrap; /* responsive */
+      }
+
+      .profile img {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        border: 5px solid white;
+        object-fit: cover;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+
+      .profile img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .profile-text {
+        flex: 1;
+        min-width: 250px;
+        color: white;
+      }
+
+      .profile-text h1 {
+        font-size: 26px;
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 4px #000;
+      }
+
+      .profile-text p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      /* Links styling */
+      a {
+        color: #f8e1f9;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .profile {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 20px;
+          gap: 20px;
+        }
+
+        .profile img {
+          width: 180px;
+          height: 180px;
+        }
+
+        .profile-text h1 {
+          font-size: 22px;
+        }
+
+        .profile-text p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Manahil Wajid</h1>
+    <h2 class="subheading">Task 11: Personal Portfolio Styling</h2>
+
+    <!-- Profile Section -->
+    <div class="profile">
+      <img src="./images/profile.jpg" alt="profile" loading="lazy" />
+      <div class="profile-text">
+        <h1>Manahil Wajid</h1>
+        <p>
+          I am a Computer Science student at UET Peshawar, and Im really
+          interested in web development. I enjoy creating interactive websites
+          and learning new ways to improve my HTML, CSS, and JavaScript skills.
+        </p>
+        <p>
+          Email me at:
+          <a href="mailto:24PWBCS1249@uetpeshawar.edu.pk"
+            >24PWBCS1249@uetpeshawar.edu.pk</a
+          ><br />
+          Call me at: <a href="tel:+92223344556">+92 223344556</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

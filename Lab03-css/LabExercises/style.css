@@ -1,0 +1,641 @@
+/*  Part A: CSS Basics and Selectors */
+.exercise-1 h2{
+  color:black;
+}
+/* Exercise 1: CSS Implementation Methods */
+.exercise-1 .external {
+  color: green;
+}
+/* CSS Precedence */
+.exercise-1 .precedence {
+    color: palevioletred;
+}
+/* Exercise 2: Basic Selectors */
+.exercise-2 h2{
+  color:black;
+}
+/* Element selectors (p, h1, div) */
+.exercise-2 h4 {
+  color: green;
+  font-weight: 900;
+}
+.exercise-2 p {
+  color: blueviolet;
+  font-weight: 500;
+}
+.exercise-2 div {
+  color: orange;
+  font-weight: 500;
+}
+/* Class selectors (.class-name) */
+.exercise-2 .class-selector {
+  color: orangered;
+}
+/* ID selectors (#element-id) */
+.exercise-2 #id-selector {
+  color: red;
+}
+/* universal selector (*) */
+* {
+  background-color: beige;
+}
+/* Exercise 3: Attribute Selectors */
+.exercise-3 h2{
+  color: black;
+}
+/* Select elements with specific attributes ([attribute]) */
+.exercise-3 input[type] {
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+/* Exact attribute value ([attribute="value"]) */
+.exercise-3 input[type="text"] {
+  background-color: lightblue;
+}
+
+.exercise-3 input[type="password"] {
+  background-color: lightseagreen;
+}
+
+/* Partial value matching ([attribute*="value"]) */
+.exercise-3 a[href*="google"] {
+  color: plum;
+  text-decoration: underline;
+}
+/*  Begins with ([attribute^="value"]) */
+.exercise-3 a[href^="https"] {
+  font-weight: bold;
+}
+
+/* Ends with ([attribute$="value"]) */
+.exercise-3 img[src$=".jpg"] {
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+/*  Part B: Combinators and Pseudo-classes */
+
+/* Exercise 4: CSS Combinators */
+.exercise-4 h2{
+  color: black;
+}
+/* Descendant combinator (space) */
+.exercise-4 .descendant p {
+  color: orangered;
+}
+
+/* Child combinator (>) */
+.exercise-4 .parent-child > p {
+  color: blueviolet;
+}
+
+/* Adjacent sibling combinator (+) */
+.exercise-4 h4 + p {
+  color: greenyellow;
+}
+
+/* General sibling combinator (~) */
+.exercise-4 h4 ~ p {
+  color: brown;
+  font-size: 16px;
+}
+
+/* Exercise 5: Pseudo-classes */
+.exercise-5 h2 {
+  color: black;
+}
+/* Link states */
+.exercise-5 a.link-unvisited {
+  color: blue;
+  text-decoration: none;
+}
+
+.exercise-5 a.link-visited:visited {
+  color: purple; /* :visited ka only color allowed */
+  text-decoration: underline;
+  border-bottom: 2px solid purple;
+}
+
+.exercise-5 a.link-hover:hover {
+  color: red;
+  text-decoration: underline;
+  border-bottom: 2px dashed red; /* visual effect on hover */
+}
+
+.exercise-5 a.link-active:active {
+  color: green;
+  text-decoration: underline;
+  border-bottom: 2px double green; /* visual effect on click */
+}
+
+/* Form states */
+.exercise-5 input:focus {
+  border: 2px solid black;
+  background-color: brown;
+}
+.exercise-5 input:checked {
+  outline: 2px solid white;
+}
+.exercise-5 input:disabled {
+  background-color: lightgray;
+}
+
+/* Structural pseudo-classes */
+.exercise-5 li:first-child {
+  font-weight: bold;
+  color: blue;
+}
+.exercise-5 li:last-child {
+  font-style: italic;
+  color: green;
+}
+.exercise-5 li:nth-child(2) {
+  color: red;
+}
+
+/* Content-based pseudo-classes */
+.exercise-5 div:empty {
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+}
+.exercise-5 p:not(.para2) {
+  background-color: pink;
+}
+
+/* Exercise 6: Pseudo-elements */
+.exercise-6 h2 {
+  color: black;
+}
+/* ::before and ::after */
+.exercise-6 .before-after::before {
+  content: "★ ";
+  color: brown;
+}
+.exercise-6 .before-after::after {
+  content: " ✔";
+  color: brown;
+}
+
+/* ::first-letter and ::first-line */
+.exercise-6 .first-letter-line::first-letter {
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+.exercise-6 .first-letter-line::first-line {
+  color: blue;
+  font-style: italic;
+}
+
+/* ::selection for text selection */
+.exercise-6 .select-text::selection {
+  background-color: black;
+  color: brown
+}
+
+/*  Combine pseudo-elements with pseudo-classes */
+.exercise-6 .first-letter-hover:hover::first-letter {
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*  Part C: Text and Font Styling  */
+
+/* Exercise 7: Font Properties */
+.exercise-7 h2 {
+  color: black;
+}
+/* Font families */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&family=Montserrat&display=swap");
+
+.exercise-7 .web-font {
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.exercise-7 .google-font {
+  font-family: "Roboto", sans-serif;
+  color: purple;
+  font-size: 25px;
+}
+
+/* Font sizes */
+.exercise-7 .font-size {
+  /* font-size: 15px; /* px unit */
+  /* font-size: 3em;  /* em unit */
+  font-size: 2rem; /* rem unit */
+  /* font-size: 50%;   /* percentage */
+  color: blue;
+}
+
+/* Font weights */
+.exercise-7 .font-weight {
+  /* font-weight: normal; normal */
+  font-weight: bold; /* bold */
+  /* font-weight: lighter; /* lighter */
+  /* font-weight: 500;    /* numeric value */
+  color: purple;
+}
+
+/* Font style and variant */
+.exercise-7 .font-style-variant {
+  font-style: oblique; /* italic text */
+  font-variant: small-caps; /* small caps letters */
+  font-weight: bold;  
+  font-size: 20px; 
+  color: palevioletred;
+}
+
+/* Exercise 8: Text Styling */
+.exercise-8 h2 {
+  color: black;
+}
+/* Text color and opacity */
+.exercise-8 .color-opacity {
+  color: red;
+  opacity: 0.5;
+}
+
+/* Text alignment and decoration */
+.exercise-8 .alignment-decoration {
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: violet;
+}
+
+/* Text transformation */
+.exercise-8 .text-transform {
+  text-transform: capitalize;
+  font-style: italic;
+  color: blue;
+}
+
+/* Text shadow */
+.exercise-8 .text-shadow {
+  text-shadow: 2px 2px 5px grey;
+  color: peru;
+}
+/* Exercise 9: Text Spacing */
+.exercise-9 h2 {
+  color: black;
+}
+/* Line height */
+.exercise-9 .line-height {
+  line-height: 5;
+  color: brown;
+}
+
+/* Letter and word spacing */
+.exercise-9 .letter-word-spacing {
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  color: blueviolet;
+}
+
+/* Text indent and white-space */
+.exercise-9 .indent-white-space {
+  text-indent: 80px;
+  white-space: nowrap;
+  color: powderblue;
+}
+
+/* Text overflow */
+.exercise-9 .text-overflow {
+  width: 250px;
+  white-space: nowrap;
+  overflow: scroll;
+  text-overflow: clip;
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: palevioletred;
+}
+/* Part D: Background Styling  */
+
+/* Exercise 10: Background Properties */
+.exercise-10 h2 {
+  color: black;
+}
+
+/* Background Colors */
+.exercise-10 .bg-color-web {
+  background-color: brown;
+  color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.exercise-10 .bg-color-hex {
+  background-color: #8a5857;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.exercise-10 .bg-color-rgb {
+  background-color: rgb(50, 156, 50);
+  padding: 20px;
+  margin-bottom: 15px;
+  color: white;
+}
+.exercise-10 .bg-color-rgba {
+  background-color: rgba(182, 207, 123, 0.5);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* Background Images and Repetition */
+.exercise-10 .bg-image-repeat {
+  background-image: url("images/image2.jpg");
+  background-repeat: repeat; /* Repeats image */
+  background-position: center; /* Centers the repeated tiles */
+  width: 300px;
+  height: 150px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.exercise-10 .bg-image-no-repeat {
+  background-image: url("images/image2.jpg");
+  background-repeat: no-repeat; /* Single image */
+  background-position: center;
+  width: 300px;
+  height: 150px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Background Position and Size */
+.exercise-10 .bg-position-size {
+  background-image: url("images/image2.jpg");
+  background-position: center; /* Centers image */
+  background-size: cover; /* Scales to cover box */
+  background-repeat: no-repeat; /* Prevent repetition */
+  width: 300px;
+  height: 150px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Background Attachment */
+.exercise-10 .bg-attachment-fixed {
+  background-image: url("images/image2.jpg");
+  background-attachment: fixed; /* Stays fixed while scrolling */
+  background-size: cover; /* Covers entire div */
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 15px;
+  color: white; /* Optional text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.exercise-10 .bg-attachment-scroll {
+  background-image: url("images/image2.jpg");
+  background-attachment: scroll; /* Scrolls with content */
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 500px;
+  margin-bottom: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+/* Exercise 11: Advanced Background Techniques */
+.exercise-11 h2 {
+  color: black;
+}
+/* Multiple background layers */
+.exercise-11 .bg-multiple {
+  background-image: url("images/image2.jpg"),
+    linear-gradient(rgba(255, 0, 0, 0.3), rgba(0, 255, 0, 0.3));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+/*  Linear and radial gradients */
+.exercise-11 .bg-linear-gradient {
+  background: linear-gradient(to right, rgb(241, 131, 131),rgb(216, 216, 92));
+  height: 200px;
+}
+.exercise-11 .bg-radial-gradient {
+  background: radial-gradient(circle, blue, pink);
+  height: 200px;
+}
+
+/*  Background blend modes */
+.exercise-11 .bg-blend {
+  background-image: url("images/image2.jpg");
+  background-color: rgba(100, 34, 34, 0.5);
+  background-blend-mode:hard-light;
+  height: 250px;
+}
+
+/*  Background clip and origin */
+.exercise-11 .bg-clip-origin {
+  background-color: rgb(114, 163, 114);
+  background-image: url("images/image2.jpg");
+  background-origin: content-box;
+  background-clip: padding-box;
+  height: 250px;
+}
+/*  Part E: Image Styling and Effects */
+
+/* Exercise 12: Basic Image Styling */
+.exercise-12 h2 {
+  color: black;
+}
+/* Image dimensions and Aspect Ratio */
+.exercise-12 .img-basic {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+/* Borders and Border Radius */
+.exercise-12 .img-border {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+/* Object-fit and Object-position */
+.exercise-12 .img-fit {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top right;
+  margin-bottom: 20px;
+}
+/* Basic Image Filters */
+.exercise-12 .img-filter {
+  width: 300px;
+  height: auto;
+  filter: grayscale(100%) blur(2px);
+  margin-bottom: 20px;
+}
+
+/* Exercise 13: Advanced Image Effects */
+.exercise-13 h2{
+  color: black;
+}
+/*  Hover Effect */
+.exercise-13 .hover-img{
+  width:300px;
+  transition:0.5s;
+  }
+  
+  .exercise-13 .hover-img:hover{
+  transform:scale(1.1);
+  }
+  
+  /* CSS Filters */
+  .exercise-13 .filter-img{
+  width:300px;
+  filter:blur(5px) brightness(100%) contrast(150%);
+  }
+  
+  /* Blend Mode */
+  .exercise-13 .blend-container{
+  display:inline-block;
+  padding:20px;
+  }
+  
+  .exercise-13 .blend-img{
+  width:300px;
+  mix-blend-mode:hard-light;
+  }
+  
+  /* Clip Path (Image Mask) */
+  .exercise-13 .clip-img{
+  width:300px;
+  clip-path:circle(80%);
+  }
+
+/*  Part F: Box Model & Effects */
+
+/* Exercise 14: Box Model Properties */
+.exercise-14 h2{
+  color: black;
+}
+/* Margins, Padding, and Borders */
+.exercise-14 .box {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  padding: 15px;
+  border: 3px solid #330805;
+  background-color: #cabebe;
+  color: black;
+}
+/* Box-sizing (content-box vs border-box) */
+.exercise-14 .box-border {
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  padding: 15px;
+  border: 3px solid #aedaff;
+  margin-bottom: 20px;
+  background-color: #98d7ec;
+  color: black;
+}
+/* Outline Properties */
+.box-outline {
+  width: 200px;
+  height: 100px;
+  outline: 4px dashed palevioletred;
+  margin-bottom: 20px;
+  color: black;
+}
+/* Box-shadow Effects */
+.exercise-14 .box-shadow {
+  width: 200px;
+  height: 100px;
+  background-color: #fffacd;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  color: black;
+}
+
+
+/* Exercise 15: Transforms & Transitions */
+.exercise-15 h2{
+  color: black;
+}
+/* 2D transformations (translate, rotate, scale, skew) */
+.exercise-15 .transform-box{
+  width:150px;
+  height:150px;
+  background-color:lightblue;
+  text-align:center;
+  line-height:150px;
+  margin:20px;
+  transform:translate(15px,5px) rotate(20deg) scale(1.1) skew(5deg);
+  color: black;
+  }
+  
+  
+  /* CSS Transitions */
+  .exercise-15 .transition-box{
+  width:150px;
+  height:150px;
+  background-color:rgb(241, 198, 116);
+  text-align:center;
+  line-height:150px;
+  margin:20px;
+  transition:0.5s;
+  color: black;
+  }
+  
+  .exercise-15 .transition-box:hover{
+  background-color:rgb(157, 248, 97);
+  transform:scale(1.5);
+  }
+  
+  
+  /* Transform Origin */
+  .exercise-15 .origin-box{
+  width:150px;
+  height:150px;
+  background-color:rgb(139, 168, 139);
+  text-align:center;
+  line-height:150px;
+  margin:20px;
+  transform-origin:top left;
+  transition:0.5s;
+  color: black;
+  }
+  .exercise-15 .origin-box:hover{
+  transform:rotate(360deg);
+  }
+  
+  
+  /* Hover Transition Effects */
+  .exercise-15 .hover-box{
+  width:150px;
+  height:150px;
+  background-color:purple;
+  color:white;
+  text-align:center;
+  line-height:150px;
+  margin:20px;
+  
+  transition:0.4s;
+  color: black;
+  }
+  
+  .exercise-15 .hover-box:hover{
+  transform:translateY(-20px);
+  background-color:rgb(102, 64, 64);
+  }

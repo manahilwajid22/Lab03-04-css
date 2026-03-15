@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab03 - CSS Background Gallery</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: plum;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* Headings */
+h1.heading {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #4b0082;
+}
+h2 {
+    margin: 20px 0 10px;
+    color: #6a0dad;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 10px;
+}
+
+
+.solid {
+    background-color: pink;
+}
+
+
+.image-bg-repeat {
+    background-image: url('https://picsum.photos/50/50');
+    background-repeat: repeat;
+}
+.image-bg-norepeat {
+    background-image: url('https://picsum.photos/300/150');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.image-bg-repeat-x {
+    background-image: url('https://picsum.photos/50/50');
+    background-repeat: repeat-x;
+}
+.image-bg-repeat-y {
+    background-image: url('https://picsum.photos/50/50');
+    background-repeat: repeat-y;
+}
+
+
+.linear-gradient {
+    background: linear-gradient(to right, red, yellow);
+}
+.radial-gradient {
+    background: radial-gradient(circle, blue, white);
+}
+
+
+.multi-bg {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url('https://picsum.photos/300/150');
+    background-size: cover;
+    background-position: center;
+}
+
+.blend {
+    background-image: linear-gradient(red, blue), url('https://picsum.photos/300/150');
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: 150px;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1 class="heading">Background Gallery - Lab Task</h1>
+
+<!-- Solid Color Section -->
+<h2>Solid Color Background</h2>
+<div class="section">
+    <div class="card solid">Solid Background</div>
+</div>
+
+<!-- Image Background Section -->
+<h2>Image Backgrounds</h2>
+<div class="section">
+    <div class="card image-bg-repeat">Repeat in All Directions</div>
+    <div class="card image-bg-norepeat">No Repeat</div>
+    <div class="card image-bg-repeat-x">Repeat X</div>
+    <div class="card image-bg-repeat-y">Repeat Y</div>
+</div>
+
+<!-- Gradients -->
+<h2>Linear and Radial Gradients</h2>
+<div class="section">
+    <div class="card linear-gradient">Linear Gradient</div>
+    <div class="card radial-gradient">Radial Gradient</div>
+</div>
+
+<!-- Multiple Background Layers -->
+<h2>Multiple Background Layers</h2>
+<div class="section">
+    <div class="card multi-bg">Multiple Layers</div>
+</div>
+
+<!-- Background Blend Modes -->
+<h2>Background Blend Modes</h2>
+<div class="section">
+    <div class="card blend">Blend Mode Example</div>
+</div>
+
+</body>
+</html>
